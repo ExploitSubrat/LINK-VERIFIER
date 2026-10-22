@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#0b1020">
+<meta name="description" content="LinkLens checks URL formatting and visible risk indicators locally in your browser.">
+<title>LinkLens — URL Safety Analyzer</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="wrap">
+<header>
+  <div class="brand"><div class="logo" aria-hidden="true">L</div><span>LinkLens</span></div>
+  <span class="pill">BROWSER-BASED CHECKS</span>
+</header>
+<main>
+<section class="hero">
+  <div class="eyebrow">Pause · Inspect · Decide</div>
+  <h1>Look closer at<br><span class="grad">every link.</span></h1>
+  <p class="sub">Check a URL's format and visible warning signs before you decide whether to open it.</p>
+</section>
+<section class="card" aria-labelledby="check-title">
+  <h2 id="check-title">Analyze a URL</h2>
+  <p class="muted">Paste a link below. LinkLens analyzes the text locally in this browser; it does not visit the website.</p>
+  <form id="scan-form">
+    <label for="url-input">Website URL</label>
+    <div class="entry">
+      <input id="url-input" type="text" inputmode="url" autocomplete="url" spellcheck="false" placeholder="https://example.com" aria-describedby="input-help" required>
+      <button type="submit">Analyze URL →</button>
+    </div>
+    <p class="hint" id="input-help">Never paste passwords, private tokens, or secret links.</p>
+  </form>
+  <div class="samples">
+    <span class="muted">Try an example:</span>
+    <button class="sample secondary" type="button" data-sample="https://example.com">Normal URL</button>
+    <button class="sample secondary" type="button" data-sample="http://192.0.2.10/login">IP address</button>
+    <button class="sample secondary" type="button" data-sample="https://secure-login.example.invalid">Unusual hostname</button>
+  </div>
+  <div id="error" class="notice hidden" role="alert"></div>
+</section>
+<section id="result" class="card result hidden" aria-live="polite">
+  <div class="result-head">
+    <div><h2>Analysis result</h2><div id="normalized-url" class="muted" style="overflow-wrap:anywhere"></div></div>
+    <span id="risk-badge" class="status medium">Review</span>
+  </div>
+  <div class="grid">
+    <div class="metric"><div class="k">Protocol</div><div id="protocol" class="v">—</div></div>
+    <div class="metric"><div class="k">Hostname</div><div id="hostname" class="v">—</div></div>
+    <div class="metric"><div class="k">HTTPS</div><div id="https" class="v">—</div></div>
+  </div>
+  <h3>What we noticed</h3>
+  <ul id="findings"></ul>
+  <div id="verdict-note" class="notice"></div>
+</section>
+<section class="card result" style="margin-top:18px">
+  <div class="result-head"><div><h2>Recent scans</h2><p class="muted" style="margin:4px 0 0">Saved only in this browser on this device.</p></div><button id="clear-history" class="secondary" type="button">Clear history</button></div>
+  <div id="history-list" style="margin-top:10px"><p class="muted">No scans yet.</p></div>
+</section>
+<section class="notice" style="margin-top:18px">
+  <strong>Safety limitation:</strong> This is an educational, rule-based checker—not an antivirus or reputation service. HTTPS encrypts a connection but does not prove a site is trustworthy. A clean result is not a guarantee of safety.
+</section>
+</main>
+<footer>LinkLens · Built as an open-source learning project · No URL is sent to a server by this page.</footer>
+</div>
+<script src="js/app.js" defer></script>
+</body>
+</html>
