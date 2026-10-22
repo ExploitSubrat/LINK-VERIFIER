@@ -1,0 +1,51 @@
+:root{color-scheme:dark;--bg:#0b1020;--panel:#121a2d;--panel2:#0e1628;--line:#283650;--text:#edf3ff;--muted:#9aabc7;--blue:#72a7ff;--cyan:#67e8f9;--green:#72e6a6;--yellow:#ffd479;--red:#ff8585}
+*{box-sizing:border-box}
+body{margin:0;background:radial-gradient(ellipse at top,#162342 0%,var(--bg) 52%);color:var(--text);font:16px/1.55 system-ui,-apple-system,Segoe UI,Roboto,sans-serif;min-height:100vh}
+.wrap{width:min(940px,100%);margin:auto;padding:24px 16px 48px}
+header{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:28px}
+.brand{display:flex;align-items:center;gap:11px;font-weight:800;font-size:1.25rem;letter-spacing:.2px}
+.logo{display:grid;place-items:center;width:42px;height:42px;border-radius:13px;background:linear-gradient(135deg,#6ca7ff,#60e3d0);color:#081324;font-weight:900;font-size:1.25rem}
+.pill{border:1px solid var(--line);border-radius:999px;padding:6px 10px;color:var(--muted);font-size:.78rem}
+.hero{text-align:center;padding:24px 0 28px}
+.eyebrow{color:var(--cyan);font-size:.8rem;text-transform:uppercase;letter-spacing:2px;font-weight:750}
+h1{font-size:clamp(2rem,7vw,3.5rem);line-height:1.08;letter-spacing:-1.4px;margin:12px 0}
+.grad{background:linear-gradient(90deg,#8bb7ff,#67e8d2);background-clip:text;-webkit-background-clip:text;color:transparent}
+.sub{max-width:650px;margin:0 auto;color:var(--muted)}
+.card{background:linear-gradient(180deg,rgba(20,30,52,.97),rgba(14,22,40,.97));border:1px solid var(--line);border-radius:20px;padding:clamp(16px,4vw,26px);box-shadow:0 18px 55px #0002}
+label{display:block;font-weight:700;margin-bottom:9px}
+.entry{display:flex;gap:10px}
+input{min-width:0;flex:1;background:#080e1c;border:1px solid #344564;border-radius:12px;padding:14px;color:var(--text);font:inherit;outline:none}
+input:focus{border-color:var(--blue);box-shadow:0 0 0 3px #72a7ff22}
+button{font:inherit;font-weight:750;border:0;border-radius:12px;padding:13px 18px;background:linear-gradient(135deg,#8bb7ff,#65dfd0);color:#071324;cursor:pointer}
+button:focus-visible{outline:3px solid white;outline-offset:3px}
+button.secondary{background:#1b2942;color:var(--text);border:1px solid #354664}
+.hint{color:var(--muted);font-size:.85rem;margin:10px 0 0}
+.samples{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin-top:16px}
+.sample{padding:7px 10px;font-size:.82rem;border-radius:9px}
+.result{margin-top:18px}
+.hidden{display:none!important}
+.result-head{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;flex-wrap:wrap}
+h2{font-size:1.15rem;margin:0 0 5px}
+h3{font-size:1rem;margin:20px 0 10px}
+.muted{color:var(--muted)}
+.status{font-weight:800;border-radius:999px;padding:6px 11px;font-size:.82rem}
+.status.low{background:#163b32;color:var(--green)}
+.status.medium{background:#49391b;color:var(--yellow)}
+.status.high{background:#48242d;color:var(--red)}
+.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-top:18px}
+.metric{background:var(--panel2);border:1px solid var(--line);border-radius:13px;padding:13px;min-width:0}
+.metric .k{font-size:.77rem;color:var(--muted)}
+.metric .v{font-weight:750;overflow-wrap:anywhere;margin-top:5px}
+ul{padding-left:21px;margin:8px 0}
+li{margin:8px 0}
+.notice{border:1px solid #5d4c27;background:#2c2518;color:#ffe3a0;border-radius:12px;padding:12px 14px;font-size:.88rem;margin-top:16px}
+.good{border-color:#275c4a;background:#112b25;color:#b5f5d5}
+.history-item{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:11px 0;border-bottom:1px solid var(--line)}
+.history-item:last-child{border-bottom:0}
+.history-url{overflow-wrap:anywhere;font-size:.9rem}
+.history-item small{display:block;color:var(--muted)}
+.history-actions{display:flex;gap:7px;flex-shrink:0}
+.history-actions button{padding:7px 9px;font-size:.78rem}
+footer{text-align:center;color:var(--muted);font-size:.83rem;padding:24px 5px 0}
+a{color:var(--blue)}
+@media(max-width:560px){.entry{flex-direction:column}.entry button{width:100%}.grid{grid-template-columns:1fr}.hero{padding-top:12px}.pill{font-size:.7rem}.history-item{align-items:flex-start}.history-actions{flex-direction:column}}
