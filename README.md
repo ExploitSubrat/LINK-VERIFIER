@@ -4,16 +4,16 @@ LinkLens is a beginner-friendly, browser-based URL analyzer. It checks URL forma
 
 ## Features
 
-- URL format validation
-- HTTP/HTTPS indicator
-- Warnings for selected suspicious URL patterns
-- Recent scan history stored in the current browser
-- Responsive layout for mobile and desktop
-- No API key or build tools required
+- URL format validation 
+- HTTP/HTTPS indicator 
+- Warnings for selected suspicious URL patterns 
+- Recent scan history stored in the current browser 
+- Responsive layout for mobile and desktop 
+- No API key or build tools required 
 
 ## Project structure
 
-```text
+```text 
 linklens/
 ├── index.html
 ├── css/
