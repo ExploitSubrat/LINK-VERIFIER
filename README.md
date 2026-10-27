@@ -1,11 +1,11 @@
 # LinkLens — URL Safety Analyzer
 
-LinkLens is a beginner-friendly, browser-based URL analyzer. It checks URL formatting and a small set of visible warning indicators locally in your browser.
+LinkLens is a beginner-friendly, browser-based URL analyzer. It checks URL formatting and a small set of visible warning indicators locally in your browser. 
 
 ## Features
 
 - URL format validation 
-- HTTP/HTTPS indicator 
+- HTTP/HTTPS indicator Testing 
 - Warnings for selected suspicious URL patterns 
 - Recent scan history stored in the current browser 
 - Responsive layout for mobile and desktop 
